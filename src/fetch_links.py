@@ -4,8 +4,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
 
-# Base URL for Trotec site
-BASE_URL = "http://de.trotec.com/"
 # Parameters to fetch XML version of TYPO3 page
 PAYLOAD = { "type": 105 }
 
