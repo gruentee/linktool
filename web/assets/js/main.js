@@ -24,7 +24,7 @@ $(function() {
 	  $.post("/get-page-id", { 'input-link': data })
 	    .done(function(resp) {
 				console.log(e.target.id);
-				var baseUrl = "http://de.trotec.com/";
+				var baseUrl = "https://de.trotec.com/";
 				var val = e.target.id == "btn-fetchlink" ? baseUrl + "?id=" + resp : resp;
 	      $('#input-link').val(val);
 				// TODO: fix - broken
