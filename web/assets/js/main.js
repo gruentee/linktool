@@ -1,5 +1,9 @@
 $(function() {
   var $btn = $('#btn-replace');
+	// select text on focus for easier copying
+	$('#link-html, #text, #input-link').focus(function(e) {
+		$(this).select();
+	});
 
   $btn.click(function() {
     //console.log('button clicked');
