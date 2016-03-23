@@ -1,0 +1,108 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TextTools</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            .highlight { background-color: lightsalmon; }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TextTools</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Spalten für Server-seitige Verarbeitung -->
+		<div class="row">
+	        <div class="col-md-6">
+	          <h3>&lt;a&gt;<span class="highlight">…</span>&lt;a&gt; &#10158;<!--&zigrarr;--> &lt;a title="<span class="highlight">…</span>"&gt;</h3>
+	          <form method="post" accept-charset="iso-8559-1">
+	            <div class="form-group">
+	                <textarea id="link-html" name="link-html" class="form-control" rows="10"></textarea>
+	            </div>
+				<div class="form-group">
+	           	 	<a class="btn btn-default" id="btn-replace" href="#" role="button" data-clipboard-target="#link-html">Ersetzen</a>
+			 	</div>
+			</form>
+	        </div>
+		
+		<!-- Spalte client-seitig -->
+        <div class="col-md-6">
+          <h3>Client-seitig</h3>
+					<div class="form-group">
+						<textarea name="text" id="text" class="form-control" rows="10"></textarea>
+					</div>
+					<p><a class="btn btn-default" id="btn-js-replace" data-clipboard-target="#text" href="#" role="button">Ersetzen</a>										
+        </div>
+	</div>
+	<div class="row">
+		<div class="alert alert-success" role="alert" style="display: none;">Text wurde in die Zwischenablage kopiert</div>
+	</div>
+	<!-- Zeile PageID herausfinden -->
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Get TYPO3 PageID</h4>
+			<form class="form-inline" id="form-fetchlink">
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon">http://</div>
+						<input type="text" name="input-link" placeholder="Link einfügen" id="input-link" class="form-control" size="60">
+						<div class="input-group-addon">URL</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<a id="btn-fetchlink" class="btn btn-default" href="#">link</a>
+					<a id="btn-fetchid" class="btn btn-default" href="#">ID</a>
+				</div>
+			</form>
+		</div>
+	</div>
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 &bull; made with &hearts; by <a href="http://websolutions.koeln" title="Visit my website">Constantin Kraft</a> featuring <a href="http://getbootstrap.com" title="Responsive Webdesign toolkit">Twitter Bootstrap</a>, <a href="http://bottlepy.org" title="A minimalistic Python web framework">Bottle.py</a>, <a title="Easy HTML manipulation for Python" href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a></p>
+      </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+
+        <script src="js/main.js"></script>
+				<script src="js/jsreplace.js"></script>
+
+    </body>
+</html>
