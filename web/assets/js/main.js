@@ -27,14 +27,6 @@ $(function() {
 				var baseUrl = "https://de.trotec.com/";
 				var val = e.target.id == "btn-fetchlink" ? baseUrl + "?id=" + resp : resp;
 	      $('#input-link').val(val);
-				// TODO: fix - broken
-				var clipboard = new Clipboard('#btn-fetchlink, #btn-fetchid', {
-				    text: function(trigger) {
-							console.log(trigger);
-				      return $('#input-link').val();
-				    }
-				});
-				clipboard.destroy();
 	    })
 	    .fail(function() {
 	      // do error stuff

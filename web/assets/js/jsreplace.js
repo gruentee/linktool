@@ -17,5 +17,6 @@ var replaceLinkTitles = function() {
     links[i].setAttribute('title', links[i].innerHTML);
   }
   elTextarea.value = html.innerHTML;
+	destroy html;
 }
 
